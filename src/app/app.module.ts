@@ -15,6 +15,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { FormsModule } from '@angular/forms';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
+import { DialogAnimationsExampleDialog } from './training/current-training/DialogAnimationsExample.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { SidenavComponent } from './navigation/sidenav/sidenav.component';
     NewTrainingComponent,
     WelcomeComponent,
     HeaderComponent,
-    SidenavComponent
+    SidenavComponent,
+    DialogAnimationsExampleDialog
   ],
   imports: [
     BrowserModule,
@@ -37,6 +39,8 @@ import { SidenavComponent } from './navigation/sidenav/sidenav.component';
     Material
 
   ],
+  entryComponents: [DialogAnimationsExampleDialog]
+  ,
   providers: [],
   bootstrap: [AppComponent]
 })
