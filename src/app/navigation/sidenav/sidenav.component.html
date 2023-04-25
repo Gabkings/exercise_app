@@ -1,5 +1,5 @@
 <mat-list role="list">
-    <mat-list-item role="listitem" routerLink="/training">Training</mat-list-item>
-    <mat-list-item role="listitem" routerLink="/signup">Signup</mat-list-item>
-    <mat-list-item role="listitem" routerLink="/login">Login</mat-list-item>
+    <mat-list-item *ngIf="isAuth" role="listitem" routerLink="/training">Training</mat-list-item>
+    <mat-list-item *ngIf="!isAuth" role="listitem" routerLink="/signup">Signup</mat-list-item>
+    <mat-list-item *ngIf="isAuth" role="listitem" routerLink="/login">Logout</mat-list-item>
 </mat-list>

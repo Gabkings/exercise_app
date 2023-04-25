@@ -12,10 +12,12 @@ import { CurrentTrainingComponent } from './training/current-training/current-tr
 import { PastTrainingComponent } from './training/past-training/past-training.component';
 import { NewTrainingComponent } from './training/new-training/new-training.component';
 import { WelcomeComponent } from './welcome/welcome.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavComponent } from './navigation/sidenav/sidenav.component';
 import { DialogAnimationsExampleDialog } from './training/current-training/DialogAnimationsExample.component';
+import { AuthService } from './auth/auth.service';
+import { TrainingService } from './training/training.service';
 
 @NgModule({
   declarations: [
@@ -36,12 +38,13 @@ import { DialogAnimationsExampleDialog } from './training/current-training/Dialo
     AppRoutingModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     Material
 
   ],
   entryComponents: [DialogAnimationsExampleDialog]
   ,
-  providers: [],
+  providers: [AuthService, TrainingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
